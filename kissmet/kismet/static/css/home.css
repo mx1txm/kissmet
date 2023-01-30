@@ -1,0 +1,215 @@
+/* CSS styles */
+
+body {
+ font-family: "Manrope" , sans-serif;
+ background: #FFF3ED;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9E6767;
+}
+
+.nav-items{
+  display: flex;
+}
+
+.nav-items li a{
+  margin: 0 20;
+  color: #9E6767;
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+}
+
+ul.b {
+  list-style-type: square;
+  padding: 50px 50px 50px 50px;
+}
+
+h1, h2, h3, h4, h5 {
+color: #C18D80;
+}
+
+h4{
+  margin-top: 100px;
+  padding: 0px 50px;
+}
+
+.hero-container{
+  display: flex;
+  margin-top: 50px;
+  padding: 0px 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left .right{
+  width: 50%;
+}
+
+.right .img{
+   width: 200%;
+   height: 200%;
+}
+
+.days{
+    display: flex;
+}
+
+.days btn{
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.aboutus{
+    display: flex;
+    flex-direction: column;
+    background: #c8e6c9;
+    color: #107F3A;
+    padding: 50px 50px;
+    width: 95%;
+    text-align: left;
+    margin: 150px 0px 100px;
+}
+
+.aboutus p, .aboutus h2{
+    display: block;
+}
+
+.hero-container right{
+    margin-left: 30px;
+}
+
+/* Kostenlose Vereinsangebote entdecken */
+.container2{
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  padding: 0px 50px;
+  justify-content: space-between;
+  align-items: center;
+  color: #C18D80;
+}
+
+img {
+  width: 300px;
+}
+.caption{
+    display: block;
+}
+/* bis hier */
+
+
+/* Vereinsangebote suchen */
+
+.suche{
+  display: flex;
+  margin-top: 50px;
+  padding: 0px 50px;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+.kategorie{
+  display: flex;
+  padding: 0px 50px;
+  flex-direction: column;
+ }
+ /* bis hier */
+
+.btn{
+  justify-content: center;
+  align-items: center;
+  background: #9E6767;
+  border-radius: 15px;
+  font-size: 12px;
+  padding: 8px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+#bilder img{
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  width: 60%;
+}
+
+.pricing{
+    background: #c8e6c9;
+    box-sizing: border-box;
+    padding: 0px 50px;
+    margin-bottom: 100px;
+}
+
+.column2 {
+  float: left;
+  width: 30%;
+  /* height: 300px; Should be removed. Only for demonstration */
+  background: #c8e6c9;
+  border-radius: 20px 20px 20px 20px;
+  margin: 10px 10px 10px;
+
+}
+
+/* WIE ES FUNKTINOERT */
+
+.column {
+  float: left;
+  width: 33.33%;
+  /*height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.row {
+  box-sizing: border-box;
+  padding: 0px 50px;
+  text-align:center;
+}
+
+/* Get-Together in Zahlen */
+
+.numbers{
+    background: #c8e6c9;
+    color: #107F3A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px 50px 50px 50px;
+}
+
+/* FOOTER */
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9E6767;
+  padding: 30px;
+  color: white;
+}
+
+.figure{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-item.nav-link {
+  color: #333; /* sets the text color */
+  text-decoration: none; /* removes the underline */
+  font-weight: bold; /* makes the text bold */
+  padding: 10px 20px; /* adds padding to the link */
+  border-radius: 5px; /* adds rounded corners to the link */
+  transition: background-color 0.2s ease-in-out; /* adds a smooth transition on hover */
+}

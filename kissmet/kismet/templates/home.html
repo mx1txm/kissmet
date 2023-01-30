@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+  <title>HTML CSS JS</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="logo">
+        <img src="{% static '../media/KissmetLogo.png' %}" alt="logo" style="width:25%;height:25%;margin-left:30px;">
+      </div>
+      <div class="navbar-nav">
+          {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+              {% else %}
+                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+          {% endif %}
+      </div>
+    </div>
+
+    <div class="hero-container" style="margin-bottom: 200px;">
+      <div class="left">
+        <h1 id="welcome">Your free wedding planner</h1>
+        <h4>Finde jetzt alle Dienstleister auf einer Plattform </h4>
+        <a href="#" style="margin-top: 130px; display:inline-block;" class=btn btn-primary>Registrieren</a>
+        <a href="#" style="margin-top: 130px; display:inline-block;" class=btn btn-primary>Anmelden</a>
+      </div>
+      <div class="right">
+        <img src="{% static '../media/weddingCouple.png' %}" alt="couple" style="width:100%; margin-top: 60px; margin-left: 0px; display: block;">
+      </div>
+    </div>
+
+    <h2 style="text-align:center;">Wie KissMet funktioniert</h2>
+    <div class="container2" style="margin-top: 50px;">
+        <div class="one">
+          <img src="{% static '../media/planen.png' %}" alt="planen">
+          <a class="caption">Hochzeit planen</a>
+        </div>
+        <div class="two">
+          <img src="{% static '../media/heiraten.png' %}" alt="heiraten">
+          <a class="caption">Heiraten</a>
+        </div>
+        <div class="three">
+          <img src="{% static '../media/planen.png' %}" alt="planen">
+          <a class="caption">Hochzeit planen</a>
+        </div>
+    </div>
+
+    <h2 style="text-align:center;">Finde alles was du für deine Hochzeit brauchst</h2>
+
+    <div class="figure" style="background-color:#E4B39A; margin-top: 50px;">
+          <img class="img-fluid img-thumbnail" src="{% static '../media/makeup.png' %}" style="width: 20%; margin-left: 10%; margin-right: 5%; margin-top: 30px; margin-bottom: 80px;">
+          <img class="img-fluid img-thumbnail" src="{% static '../media/fotograf.png' %}" style="width: 20%; margin-left: 5%; margin-right: 5%; margin-top: 30px; margin-bottom: 80px;">
+          <img class="img-fluid img-thumbnail" src="{% static '../media/catering.png' %}" style="width: 20%; margin-left: 5%; margin-right: 5%; margin-top: 30px; margin-bottom: 80px;">
+          <img class="img-fluid img-thumbnail" src="{% static '../media/musiker.png' %}" style="width: 20%; margin-left: 10%; margin-right: 5%; margin-bottom: 80px;">
+          <img class="img-fluid img-thumbnail" src="{% static '../media/entertainer.png' %}" style="width: 20%; margin-left: 5%; margin-right: 5%; margin-bottom: 80px;">
+          <img class="img-fluid img-thumbnail" src="{% static '../media/florist.png' %}" style="width: 20%; margin-left: 5%; margin-right: 5%; margin-bottom: 80px;">
+    </div>
+
+
+    <div style="margin-top: 300px; margin-bottom: 200px;">
+      <h1 style="text-align:center; width:50%; margin-left: 25%;" >Finde deine Traumlocation in Deutschlands größter Kollektion an Hochzeitslocations </h1>
+      <div class="suchfeld" style="text-align:center; margin-top: 150px;">
+          <input type="text" placeholder="Suche" style="text-align: center;">
+      </div>
+    </div>
+
+    <footer>
+      <a>About</a>
+        <ul class="about">
+            <li>About us</li>
+            <li>Impressum</li>
+            <li>F&Q's</li>
+        </ul>
+      <a>Support</a>
+        <ul class="about">
+            <li>About us</li>
+            <li>Impressum</li>
+            <li>F&Q's</li>
+        </ul>
+      <a>FAQ</a>
+        <ul class="about">
+            <li>About us</li>
+            <li>Impressum</li>
+            <li>F&Q's</li>
+        </ul>
+      <a>About</a>
+        <ul class="about">
+            <li>About us</li>
+            <li>Impressum</li>
+            <li>F&Q's</li>
+        </ul>
+    </footer>
+
+  </div>
+</body>
+</html>

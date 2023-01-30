@@ -1,0 +1,89 @@
+body {
+ font-family: "Manrope" , sans-serif;
+ background: #FFF3ED;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9E6767;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.nav-items{
+  display: flex;
+}
+
+.nav-items li a{
+  margin: 0 20;
+  color: #9E6767;
+  text-decoration: none;
+}
+
+.btn{
+  justify-content: center;
+  align-items: center;
+  background: #9E6767;
+  border-radius: 15px;
+  font-size: 12px;
+  padding: 8px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9E6767;
+  padding: 30px;
+  color: white;
+}
+
+
+
+
+.content-section {
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+form {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+label {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+  color: #C18D80;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  font-size: 16px;
+  color: #C18D80;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  border: none;
+}
+
+.btn {
+  background-color: #C18D80;
+

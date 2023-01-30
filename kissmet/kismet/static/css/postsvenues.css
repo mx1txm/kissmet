@@ -1,0 +1,87 @@
+body {
+ font-family: "Manrope" , sans-serif;
+ background: #FFF3ED;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9E6767;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.nav-items{
+  display: flex;
+}
+
+.nav-items li a{
+  margin: 0 20;
+  color: #9E6767;
+  text-decoration: none;
+}
+
+.btn{
+  justify-content: center;
+  align-items: center;
+  background: #9E6767;
+  border-radius: 15px;
+  font-size: 12px;
+  padding: 8px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9E6767;
+  padding: 30px;
+  color: white;
+}
+
+.post-container {
+  width: 80%; /* adjust as needed */
+  margin: 20px auto; /* center the post and add some margin */
+  padding: 20px; /* add some padding */
+  border: 1px solid #ccc; /* add a border */
+  border-radius: 10px; /* round the corners */
+  background-color: #f9f9f9; /* add a background color */
+  display:flex;
+}
+
+/* Left side container styling */
+.post-left {
+  width: 30%; /* adjust as needed */
+  margin-right: 20px; /* add some margin right */
+}
+
+/* Right side container styling */
+.post-right {
+  width: 70%; /* adjust as needed */
+}
+
+/* Image styling */
+.post-left img {
+  width: 100%; /* make the image full width */
+  border-radius: 10px; /* round the corners */
+}
+
+/* Title styling */
+.post-right h2 {
+  font-size: 24px; /* increase the font size */
+  font-weight: bold; /* make the title bold */
+  margin-bottom: 10px; /* add some margin bottom */
+}
+
+/* Description styling */
+.post-right p {
+  font-size: 18px; /* increase the font size */
+  line-height: 1.5; /* add some line height */
+  margin-bottom: 20px; /* add some margin bottom */
+}

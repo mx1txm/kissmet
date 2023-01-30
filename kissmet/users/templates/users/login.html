@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static '/css/newpost.css' %}">
+  <title>HTML CSS JS</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="logo">
+        <img src="{% static '../media/KissmetLogo.png' %}" alt="logo" style="width:25%;height:25%;margin-left:30px;">
+      </div>
+      <div class="navbar-nav">
+          {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+              {% else %}
+                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+          {% endif %}
+      </div>
+    </div>
+
+        {% load crispy_forms_tags %}
+        {% block content %}
+        <div class="content-section">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Log In</legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit">Login</button>
+                </div>
+            </form>
+            <div class="border-top pt-3">
+                <small class="text-muted">Need an Account? <a class="ml-2" href="{% url 'register' %}">Sign up now</a></small>
+            </div>
+        </div>
+        {% endblock content %}
+
+        <footer>
+              <a>About</a>
+                <ul class="about">
+                    <li>About us</li>
+                    <li>Impressum</li>
+                    <li>F&Q's</li>
+                </ul>
+              <a>Support</a>
+                <ul class="about">
+                    <li>About us</li>
+                    <li>Impressum</li>
+                    <li>F&Q's</li>
+                </ul>
+              <a>FAQ</a>
+                <ul class="about">
+                    <li>About us</li>
+                    <li>Impressum</li>
+                    <li>F&Q's</li>
+                </ul>
+              <a>About</a>
+                <ul class="about">
+                    <li>About us</li>
+                    <li>Impressum</li>
+                    <li>F&Q's</li>
+                </ul>
+        </footer>
+
+  </div>
+</body>
+</html>
