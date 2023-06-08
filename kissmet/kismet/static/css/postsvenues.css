@@ -85,3 +85,36 @@ footer{
   line-height: 1.5; /* add some line height */
   margin-bottom: 20px; /* add some margin bottom */
 }
+
+/* styling für filtered_list.html */
+
+form{
+  height: 5px;
+  background: #9E6767;
+  padding: 25px;
+  display: flex;
+
+  margin: 50px 100px 50px 100px;
+  border-radius: 10px;
+  color:white;
+
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-control {
+  background-color: white;
+}
+
+
+label{
+ color: white;
+ margin-left: 20px;
+ margin-right: 5px;
+}

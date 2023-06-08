@@ -2,6 +2,7 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 from django import forms
 from .models import Post
+import django_filters
 
 
 class PostForm(forms.ModelForm):
@@ -17,4 +18,12 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('Titel', 'Beschreibung', 'Stadt', 'Adresse', 'Mindestpreis', 'Hoechstpreis', 'maxGaesteanzahl')
+        fields = ('title', 'description', 'city', 'adress', 'min_price', 'max_price', 'max_guest')
+
+
+class FilterForm(forms.Form):
+    title = django_filters.CharFilter(lookup_expr='icontains')
+    description = django_filters.CharFilter(lookup_expr='icontains')
+    city = django_filters.ChoiceFilter(choices=Post.city_choices)
+    #location_type = django_filters.ChoiceFilter(choices=Post.location_style_choices)
+    max_guest = django_filters.ChoiceFilter(choices=Post.max_guest)

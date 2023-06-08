@@ -19,13 +19,13 @@ class Author(models.Model):
 
 
 class Post(models.Model):
-    Titel = models.CharField(max_length=100)
-    Beschreibung = models.CharField(max_length=300)
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=300)
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
-    Adresse = models.CharField(max_length=100)
-    Mindestpreis = models.CharField(max_length=100)
-    Hoechstpreis = models.CharField(max_length=100)
-    maxGaesteanzahl = models.CharField(max_length=100)
+    adress = models.CharField(max_length=100)
+    min_price = models.CharField(max_length=100)
+    max_price = models.CharField(max_length=100)
+    max_guest = models.CharField(max_length=100)
 
     city_choices = (
         ('Berlin', 'Berlin'),
@@ -36,10 +36,27 @@ class Post(models.Model):
         ('Köln', 'Köln'),
     )
 
-    Stadt = models.CharField(max_length=15, choices=city_choices, default=0)
+    city = models.CharField(max_length=15, choices=city_choices, default=0)
+
+    #location_style_choices = (
+       # ('Schloss', 'Schloss'),
+       # ('Scheune', 'Scheune'),
+    #)
+    #location_type = models.CharField(max_length=15, choices=location_style_choices, default=0)
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'pk': self.pk})
+
+
+#FOR WEBSCRAPING
+
+class ScrapedData(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    url = models.URLField()
+
+    def __str__(self):
+        return self.title
